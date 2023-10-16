@@ -15,5 +15,6 @@ namespace ConferencePlanner.GraphQL.Data
 
         [StringLength(1000)]
         public required virtual string WebSite { get; set; }
+        public ICollection<SessionSpeaker> SessionSpeakers { get; set; } = new List<SessionSpeaker>();
     }
 }

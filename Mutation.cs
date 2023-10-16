@@ -2,11 +2,13 @@ using ConferencePlanner.GraphQL.Data;
 
 namespace ConferencePlanner.GraphQL
 {
+    [Obsolete]
     public class Mutation
     {
+        [UseDbContext(typeof(ApplicationDbContext))]
         public async Task<AddSpeakerPayload> AddSpeakerAsync(
-            AddSpeakerInput input,
-            [Service] ApplicationDbContext context)
+        AddSpeakerInput input,
+        [ScopedService] ApplicationDbContext context)
         {
             var speaker = new Speaker
             {

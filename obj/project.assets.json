@@ -109,6 +109,48 @@
           }
         }
       },
+      "HotChocolate.Data/13.5.1": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate.Execution": "13.5.1",
+          "HotChocolate.Types.CursorPagination": "13.5.1"
+        },
+        "compile": {
+          "lib/net7.0/HotChocolate.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HotChocolate.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "HotChocolate.Data.EntityFramework/13.5.1": {
+        "type": "package",
+        "dependencies": {
+          "HotChocolate": "13.5.1",
+          "HotChocolate.Data": "13.5.1",
+          "Microsoft.EntityFrameworkCore": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/HotChocolate.Data.EntityFramework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HotChocolate.Data.EntityFramework.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/HotChocolate.Data.EntityFramework.props": {},
+          "build/HotChocolate.Data.EntityFramework.targets": {}
+        }
+      },
       "HotChocolate.Execution/13.5.1": {
         "type": "package",
         "dependencies": {
@@ -1269,6 +1311,52 @@
         "lib/net8.0/HotChocolate.Authorization.xml",
         "lib/netstandard2.0/HotChocolate.Authorization.dll",
         "lib/netstandard2.0/HotChocolate.Authorization.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Data/13.5.1": {
+      "sha512": "H/BFYw46JDB7nwO40uuy6fUEptwNbFHbBW4nrjlzpwB/uzYEJlshxIgwjjSRNktwIgppsMr0vULAxj8mZKlLww==",
+      "type": "package",
+      "path": "hotchocolate.data/13.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/HotChocolate.Data.props",
+        "build/HotChocolate.Data.targets",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.data.13.5.1.nupkg.sha512",
+        "hotchocolate.data.nuspec",
+        "lib/net6.0/HotChocolate.Data.dll",
+        "lib/net6.0/HotChocolate.Data.xml",
+        "lib/net7.0/HotChocolate.Data.dll",
+        "lib/net7.0/HotChocolate.Data.xml",
+        "lib/net8.0/HotChocolate.Data.dll",
+        "lib/net8.0/HotChocolate.Data.xml",
+        "strawberryshake-signet.png"
+      ]
+    },
+    "HotChocolate.Data.EntityFramework/13.5.1": {
+      "sha512": "6UUDlmUNm/ZxkOf78906uhCpEePcUjFxTVy9EEsisDD3wvnEPLRcKmJfvE5/olhTFhXd4l0XLG8PpQVQGxg7Yg==",
+      "type": "package",
+      "path": "hotchocolate.data.entityframework/13.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/HotChocolate.Data.EntityFramework.props",
+        "build/HotChocolate.Data.EntityFramework.targets",
+        "greendonut-signet.png",
+        "hotchocolate-signet.png",
+        "hotchocolate.data.entityframework.13.5.1.nupkg.sha512",
+        "hotchocolate.data.entityframework.nuspec",
+        "lib/net6.0/HotChocolate.Data.EntityFramework.dll",
+        "lib/net6.0/HotChocolate.Data.EntityFramework.xml",
+        "lib/net7.0/HotChocolate.Data.EntityFramework.dll",
+        "lib/net7.0/HotChocolate.Data.EntityFramework.xml",
+        "lib/net8.0/HotChocolate.Data.EntityFramework.dll",
+        "lib/net8.0/HotChocolate.Data.EntityFramework.xml",
         "strawberryshake-signet.png"
       ]
     },
@@ -2752,6 +2840,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "HotChocolate.AspNetCore >= 13.5.1",
+      "HotChocolate.Data.EntityFramework >= 13.5.1",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12"
     ]
@@ -2764,11 +2853,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Platform Service Architecture\\GraphQL\\GraphQL.csproj",
+      "projectUniqueName": "C:\\Users\\Acer\\GraphQL369\\GraphQL.csproj",
       "projectName": "GraphQL",
-      "projectPath": "C:\\Users\\Acer\\Desktop\\Platform Service Architecture\\GraphQL\\GraphQL.csproj",
+      "projectPath": "C:\\Users\\Acer\\GraphQL369\\GraphQL.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Acer\\Desktop\\Platform Service Architecture\\GraphQL\\obj\\",
+      "outputPath": "C:\\Users\\Acer\\GraphQL369\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2804,6 +2893,10 @@
         "targetAlias": "net7.0",
         "dependencies": {
           "HotChocolate.AspNetCore": {
+            "target": "Package",
+            "version": "[13.5.1, )"
+          },
+          "HotChocolate.Data.EntityFramework": {
             "target": "Package",
             "version": "[13.5.1, )"
           },

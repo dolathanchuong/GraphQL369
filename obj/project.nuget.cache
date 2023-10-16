@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+3zkdeoCggaTlG5f7/diacIkksVr1hzq/6r7Dac41wYxntlDotkwkjwXMw5w/Ucbj8BWslrcDxL0I1Z8LEsuuQ==",
+  "dgSpecHash": "hv5TQeTqDvM3CoOuJtF5i42op0y2rYstJ+AcMtsDkEeBEtQAaIQulXTbHgToYZMzpwExJQCcghORQg5DmUoB/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Desktop\\Platform Service Architecture\\GraphQL\\GraphQL.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\GraphQL369\\GraphQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\bananacakepop.middleware\\7.0.4\\bananacakepop.middleware.7.0.4.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\greendonut\\13.5.1\\greendonut.13.5.1.nupkg.sha512",
@@ -10,6 +10,8 @@
     "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.abstractions\\13.5.1\\hotchocolate.abstractions.13.5.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.aspnetcore\\13.5.1\\hotchocolate.aspnetcore.13.5.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.authorization\\13.5.1\\hotchocolate.authorization.13.5.1.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.data\\13.5.1\\hotchocolate.data.13.5.1.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.data.entityframework\\13.5.1\\hotchocolate.data.entityframework.13.5.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.execution\\13.5.1\\hotchocolate.execution.13.5.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.execution.abstractions\\13.5.1\\hotchocolate.execution.abstractions.13.5.1.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\hotchocolate.fetching\\13.5.1\\hotchocolate.fetching.13.5.1.nupkg.sha512",
