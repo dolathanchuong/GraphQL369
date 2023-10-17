@@ -1,4 +1,9 @@
 using ConferencePlanner.GraphQL.Data;
+using ConferencePlanner.GraphQL.DataLoader;
+using ConferencePlanner.GraphQL.Sessions;
+using ConferencePlanner.GraphQL.Speakers;
+using ConferencePlanner.GraphQL.Tracks;
+using ConferencePlanner.GraphQL.Types;
 using Microsoft.EntityFrameworkCore;
 
 namespace ConferencePlanner.GraphQL
@@ -7,15 +12,28 @@ namespace ConferencePlanner.GraphQL
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        [Obsolete]
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(
-                options => options.UseSqlite("Data Source=conferences.db"));
+            services.AddPooledDbContextFactory<ApplicationDbContext>(options => options.UseSqlite("Data Source=conferences.db"));
 
             services
                 .AddGraphQLServer()
-                .AddQueryType<Query>()
-                .AddMutationType<Mutation>();
+                .AddQueryType(d => d.Name("Query"))
+                    .AddTypeExtension<SessionQueries>()
+                    .AddTypeExtension<SpeakerQueries>()
+                    .AddTypeExtension<TrackQueries>()
+                .AddMutationType(d => d.Name("Mutation"))
+                    .AddTypeExtension<SessionMutations>()
+                    .AddTypeExtension<SpeakerMutations>()
+                    .AddTypeExtension<TrackMutations>()
+                .AddType<SpeakerType>()
+                .AddType<AttendeeType>()
+                .AddType<SessionType>()
+                .AddType<TrackType>()
+                // .AddGlobalObjectIdentification()
+                .AddDataLoader<SpeakerByIdDataLoader>()
+                .AddDataLoader<SessionByIdDataLoader>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
