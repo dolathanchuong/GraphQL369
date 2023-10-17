@@ -1,9 +1,9 @@
 using ConferencePlanner.GraphQL.Data;
-
-namespace ConferencePlanner.GraphQL
+namespace ConferencePlanner.GraphQL.Speakers
 {
+    [ExtendObjectType("Mutation")]
     [Obsolete]
-    public class Mutation
+    public class SpeakerMutations
     {
         [UseDbContext(typeof(ApplicationDbContext))]
         public async Task<AddSpeakerPayload> AddSpeakerAsync(
@@ -13,8 +13,8 @@ namespace ConferencePlanner.GraphQL
             var speaker = new Speaker
             {
                 Name = input.Name,
-                Bio = input.Bio,
-                WebSite = input.WebSite
+                Bio = input.Bio!,
+                WebSite = input.WebSite!
             };
 
             context.Speakers.Add(speaker);

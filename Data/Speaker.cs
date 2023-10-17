@@ -8,13 +8,13 @@ namespace ConferencePlanner.GraphQL.Data
 
         [Required]
         [StringLength(200)]
-        public required string Name { get; set; }
+        public string? Name { get; set; }
 
         [StringLength(4000)]
-        public required string Bio { get; set; }
+        public string? Bio { get; set; }
 
         [StringLength(1000)]
-        public required virtual string WebSite { get; set; }
+        public virtual string? WebSite { get; set; }
         public ICollection<SessionSpeaker> SessionSpeakers { get; set; } = new List<SessionSpeaker>();
     }
 }
